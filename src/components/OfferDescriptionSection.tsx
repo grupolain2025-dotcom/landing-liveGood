@@ -1,8 +1,6 @@
 import React from 'react';
-import { CheckCircle2, XCircle, ArrowRight, ShieldCheck, Zap } from 'lucide-react';
-import { PRODUCTS_DATA } from '../data/products';
-import { formatCurrency } from '../utils/calculator';
-import { AFFILIATE_LINK } from '../data/landingData';
+import { CheckCircle2, XCircle, ArrowRight, ShieldCheck, Zap, Sparkles } from 'lucide-react';
+import { AFFILIATE_LINK, UNIFIED_CTA_TEXT } from '../data/landingData';
 
 export const OfferDescriptionSection: React.FC = () => {
   return (
@@ -10,168 +8,129 @@ export const OfferDescriptionSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="text-xs font-bold tracking-widest text-emerald-400 uppercase">
-            DESCRIPCIÓN DE LA OFERTA
-          </span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950 border border-emerald-500/30 text-xs font-bold text-emerald-400">
+            <Sparkles className="w-3.5 h-3.5" aria-hidden="true" />
+            <span>EL MODELO QUE ESTÁ TRANSFORMANDO LA INDUSTRIA</span>
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight text-balance">
-            ¿Qué es exactamente LiveGood y por qué está cambiando las reglas del juego?
+            ¿Por qué este sistema supera a los negocios tradicionales?
           </h2>
           <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-            LiveGood es un <strong>club de compras mayoristas exclusivo de salud y bienestar</strong>. 
-            En lugar de inflar los precios de los suplementos entre 500% y 1,000% para pagar comisiones abusivas a intermediarios, 
-            LiveGood los distribuye directamente de fábrica a sus miembros a precio de costo con hasta un <strong>75% de ahorro</strong>.
+            Eliminamos todo lo que la gente odia de los negocios por catálogo y el mercadeo antiguo: 
+            <strong> cero compras obligatorias, cero inventarios acumulados y un sistema 100% digital</strong> con herramientas listas para operar.
           </p>
         </div>
 
-        {/* Side-by-Side Model Comparison */}
+        {/* Side-by-Side Model Comparison (Zero Product Grid) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {/* Old Traditional Model Card */}
           <div className="p-7 sm:p-8 rounded-3xl bg-slate-950 border border-rose-900/40 relative flex flex-col justify-between space-y-6">
             <div className="space-y-5">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold tracking-wider text-rose-400 uppercase">
-                  El Modelo Tradicional
+                  Negocios Tradicionales Obsoletos
                 </span>
                 <XCircle className="w-6 h-6 text-rose-500" aria-hidden="true" />
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-white">
-                Precios inflados artificialmente y consumo forzoso
+                Compras forzadas, inventarios y estrés constante
               </h3>
 
               <div className="space-y-4 text-sm text-slate-300">
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2 shrink-0" />
                   <p>
-                    <strong>Costo de fabricación $8 USD</strong> vendido a <strong>$70 - $100 USD</strong> para pagar comisiones a múltiples intermediarios.
+                    <strong>Autoenvío obligatorio de $150 - $200 USD al mes</strong> para mantener tu rango o calificar para comisiones.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2 shrink-0" />
                   <p>
-                    <strong>Autoenvío mensual obligatorio ($100 - $200 USD)</strong> bajo amenaza de perder tu cuenta, descuento o comisiones acumuladas.
+                    <strong>Garajes y armarios llenos de cajas</strong> de productos caros que nadie quiere comprar por sus precios inflados.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2 shrink-0" />
                   <p>
-                    <strong>Garajes llenos de cajas</strong> y más del 85% de las personas renunciando por no poder sostener los gastos.
+                    <strong>Perseguir familiares y amigos</strong> y hacer llamadas incómodas para intentar vender por catálogo.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-2 shrink-0" />
+                  <p>
+                    <strong>Más del 90% de deserción</strong> debido a que los costos mensuales superan los ingresos generados.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="pt-4 border-t border-slate-800 text-xs text-rose-400 font-semibold">
-              Un sistema obsoleto donde el consumidor final paga todos los sobrecostos.
+              Un sistema desgastante donde la mayoría pierde dinero y tiempo.
             </div>
           </div>
 
-          {/* LiveGood Disruptive Model Card */}
+          {/* LiveGood Disruptive Digital Model Card */}
           <div className="p-7 sm:p-8 rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-emerald-500/50 shadow-2xl shadow-emerald-950/30 relative flex flex-col justify-between space-y-6">
             <div className="space-y-5">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold tracking-wider text-emerald-400 uppercase">
-                  La Revolución LiveGood
+                  El Modelo Digital LiveGood
                 </span>
                 <CheckCircle2 className="w-6 h-6 text-emerald-400" aria-hidden="true" />
               </div>
 
               <h3 className="text-xl sm:text-2xl font-bold text-white">
-                Membresía club directo a fábrica sin intermediarios
+                100% online, accesible y con retención récord
               </h3>
 
               <div className="space-y-4 text-sm text-slate-300">
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0" />
                   <p>
-                    <strong>Misma calidad prémium por solo $9.95 - $18 USD</strong> directo de laboratorios certificados cGMP en EE.UU.
+                    <strong>Cero compras obligatorias</strong>: Cuota de club de solo <strong>$9.95 USD/mes</strong> sin exigencias de compras de stock.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0" />
                   <p>
-                    <strong>Sin compras mínimas obligatorias</strong>: Cuota de club de <strong>$9.95/mes</strong> y compras solo lo que necesitas cuando quieres.
+                    <strong>Sistema automatizado llave en mano</strong>: Embudo digital y páginas oficiales listas para compartir desde tu móvil.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0" />
                   <p>
-                    <strong>Retención superior al 85%</strong>: Miembros felices porque ahorran cientos de dólares reales mes tras mes.
+                    <strong>Cobros puntuales semanales en dólares</strong>: 6 formas de ganar incluyendo bono de inicio rápido del 50%.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 shrink-0" />
+                  <p>
+                    <strong>Retención superior al 85%</strong>: La gente ama pertenecer al club porque ahorra dinero real y el negocio es sostenible.
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="pt-4 border-t border-slate-800 text-xs text-emerald-300 font-semibold flex items-center justify-between">
-              <span>Ahorro real + Productos de máxima biodisponibilidad.</span>
+              <span>Negocio digital escalable en más de 200 países.</span>
             </div>
           </div>
         </div>
 
-        {/* Flagship Price Comparison Snapshot */}
-        <div className="space-y-6">
-          <div className="text-center space-y-2">
-            <h3 className="text-2xl font-bold text-white">
-              Comprueba el Ahorro Real en Nuestro Catálogo
-            </h3>
-            <p className="text-sm text-slate-400">
-              Mismos ingredientes orgánicos certificados, sin el markup comercial abusivo.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {PRODUCTS_DATA.slice(0, 6).map((product) => (
-              <div
-                key={product.id}
-                className="p-5 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col justify-between space-y-4"
-              >
-                <div>
-                  <div className="flex items-center justify-between text-xs mb-2">
-                    <span className="text-slate-400">{product.category}</span>
-                    <span className="font-extrabold text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-500/30">
-                      -{product.savingsPercentage}%
-                    </span>
-                  </div>
-                  <h4 className="text-base font-bold text-white leading-snug">
-                    {product.name}
-                  </h4>
-                  <p className="text-xs text-slate-400 mt-1 line-clamp-2">
-                    {product.keyBenefit}
-                  </p>
-                </div>
-
-                <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 text-xs space-y-1.5">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-400">{product.competitorBrand}:</span>
-                    <span className="line-through text-slate-400 font-semibold tabular-nums">
-                      {formatCurrency(product.competitorPrice)}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between pt-1 border-t border-slate-800">
-                    <span className="font-bold text-emerald-400">Precio Miembro:</span>
-                    <span className="text-lg font-black text-emerald-400 tabular-nums">
-                      {formatCurrency(product.memberPrice)}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Mid-Page Call To Action Button (linking strictly to AFFILIATE_LINK) */}
-        <div className="text-center pt-4">
+        {/* Mid-Section Unified Call To Action Button */}
+        <div className="text-center pt-2">
           <a
             href={AFFILIATE_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-4 sm:py-5 text-base sm:text-lg font-black text-slate-950 bg-emerald-400 hover:bg-emerald-300 active:scale-98 transition-all rounded-xl shadow-xl shadow-emerald-500/30 uppercase tracking-wide focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400"
           >
-            <span>Ver Catálogo Completo & Reservar Posición</span>
+            <span>{UNIFIED_CTA_TEXT}</span>
             <ArrowRight className="w-5 h-5" aria-hidden="true" />
           </a>
           <p className="text-xs text-slate-400 mt-3">
-            Acceso instantáneo al sitio oficial con garantía de 90 días con botella vacía.
+            Prerregistro 100% gratuito · Posición garantizada en la línea de poder global
           </p>
         </div>
       </div>

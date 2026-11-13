@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Clock, ShieldCheck, ArrowRight, Zap, CheckCircle2, AlertCircle } from 'lucide-react';
-import { OFFER_PILLARS, AFFILIATE_LINK } from '../data/landingData';
+import { OFFER_PILLARS, AFFILIATE_LINK, UNIFIED_CTA_TEXT } from '../data/landingData';
 import { getTimeUntilNextCutoff, padZero, TimeLeft } from '../utils/timer';
 
 export const HowItWorksOfferSection: React.FC = () => {
@@ -19,17 +19,17 @@ export const HowItWorksOfferSection: React.FC = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <span className="text-xs font-bold tracking-widest text-emerald-400 uppercase">
-            LA OFERTA IRRESISTIBLE
+            SISTEMA PASO A PASO
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight text-balance">
-            ¿Cómo funciona la membresía inteligente de LiveGood?
+            ¿Cómo funciona el sistema de negocio de LiveGood?
           </h2>
           <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-            Un sistema simple, justo y diseñado para que ahorres desde tu primer pedido o generes ingresos sin barreras de entrada.
+            Un modelo transparente, escalable y 100% online diseñado para que generes comisiones semanales desde cualquier país.
           </p>
         </div>
 
-        {/* 4 Pillars of the Offer */}
+        {/* 4 Pillars of the Business Offer */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {OFFER_PILLARS.map((pillar, idx) => (
             <div
@@ -66,8 +66,8 @@ export const HowItWorksOfferSection: React.FC = () => {
               </h3>
 
               <p className="text-sm text-slate-300 leading-relaxed">
-                Cada segundo, personas de todo el mundo se registran en LiveGood. Cuando te prerregistras gratis, quedas colocado en la <strong>Línea de Poder Global</strong>. Cada persona que entra después de ti se ubica debajo. 
-                Si aseguras tu posición antes del corte semanal, bloqueas tu lugar definitivo en la matriz de derrame.
+                Cada segundo, personas de todo el mundo se registran en LiveGood para iniciar su negocio digital. Cuando te prerregistras gratis, aseguras tu puesto de ventaja en la <strong>Línea de Poder Global</strong>. Cada persona que entra después de ti en cualquier país se ubica debajo en la estructura. 
+                Si aseguras tu posición antes del corte semanal, bloqueas tu lugar definitivo.
               </p>
 
               <div className="flex flex-wrap items-center gap-4 text-xs text-slate-300 pt-1">
@@ -77,12 +77,12 @@ export const HowItWorksOfferSection: React.FC = () => {
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400" aria-hidden="true" />
-                  Visualiza a quienes se unen después de ti
+                  Visualiza a quienes se unen después de ti en tiempo real
                 </span>
               </div>
             </div>
 
-            {/* Right: Countdown Cards & CTA */}
+            {/* Right: Countdown Cards & Unified CTA */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-5">
               <span className="text-xs text-slate-400 uppercase tracking-widest font-semibold">
                 Tiempo restante para el próximo corte:
@@ -116,14 +116,15 @@ export const HowItWorksOfferSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Button strictly linking to AFFILIATE_LINK */}
+              {/* Action Button strictly UNIFIED_CTA_TEXT ("Regístrate ahora") */}
               <a
                 href={AFFILIATE_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full text-center py-4 px-6 text-sm font-black text-slate-950 bg-emerald-400 hover:bg-emerald-300 active:scale-98 rounded-xl shadow-lg shadow-emerald-500/25 transition-all uppercase tracking-wide focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400"
+                className="w-full text-center py-4 px-6 text-base font-black text-slate-950 bg-emerald-400 hover:bg-emerald-300 active:scale-98 rounded-xl shadow-lg shadow-emerald-500/25 transition-all uppercase tracking-wide focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400 flex items-center justify-center gap-2"
               >
-                Asegurar Mi Posición en la Powerline
+                <span>{UNIFIED_CTA_TEXT}</span>
+                <ArrowRight className="w-5 h-5" aria-hidden="true" />
               </a>
             </div>
           </div>

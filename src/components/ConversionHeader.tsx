@@ -1,7 +1,7 @@
 import React from 'react';
 import { Logo } from './Logo';
 import { ShieldCheck, Sparkles, ArrowRight } from 'lucide-react';
-import { AFFILIATE_LINK } from '../data/landingData';
+import { AFFILIATE_LINK, UNIFIED_CTA_TEXT } from '../data/landingData';
 
 export const ConversionHeader: React.FC = () => {
   return (
@@ -25,7 +25,7 @@ export const ConversionHeader: React.FC = () => {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-slate-950 bg-emerald-400 hover:bg-emerald-300 active:scale-98 transition-all rounded-lg shadow-md shadow-emerald-500/20 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
         >
-          <span>Asegurar Posición</span>
+          <span>{UNIFIED_CTA_TEXT}</span>
           <ArrowRight className="w-4 h-4" aria-hidden="true" />
         </a>
       </div>
